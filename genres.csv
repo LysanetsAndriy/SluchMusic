@@ -1,0 +1,164 @@
+genre_id,title
+1,Avant-Garde
+2,International
+3,Blues
+4,Jazz
+5,Classical
+6,Novelty
+7,Comedy
+8,Old-Time / Historic
+9,Country
+10,Pop
+11,Disco
+12,Rock
+13,Easy Listening
+14,Soul-RnB
+15,Electronic
+16,Sound Effects
+17,Folk
+18,Soundtrack
+19,Funk
+20,Spoken
+21,Hip-Hop
+22,Audio Collage
+23,Punk
+24,Post-Rock
+25,Lo-Fi
+26,Field Recordings
+27,Metal
+28,Noise
+29,Psych-Folk
+30,Krautrock
+31,Jazz: Vocal
+32,Experimental
+33,Electroacoustic
+34,Ambient Electronic
+35,Radio Art
+36,Loud-Rock
+37,Latin America
+38,Drone
+39,Free-Folk
+40,Noise-Rock
+41,Psych-Rock
+42,Bluegrass
+43,Electro-Punk
+44,Radio
+45,Indie-Rock
+46,Industrial
+47,No Wave
+48,Free-Jazz
+49,Experimental Pop
+50,French
+51,Reggae - Dub
+52,Afrobeat
+53,Nerdcore
+54,Garage
+55,Indian
+56,New Wave
+57,Post-Punk
+58,Sludge
+59,African
+60,Freak-Folk
+61,Jazz: Out
+62,Progressive
+63,Alternative Hip-Hop
+64,Death-Metal
+65,Middle East
+66,Singer-Songwriter
+67,Ambient
+68,Hardcore
+69,Power-Pop
+70,Space-Rock
+71,Polka
+72,Balkan
+73,Unclassifiable
+74,Europe
+75,Americana
+76,Spoken Weird
+77,Interview
+78,Black-Metal
+79,Rockabilly
+80,Easy Listening: Vocal
+81,Brazilian
+82,Asia-Far East
+83,N. Indian Traditional
+84,South Indian Traditional
+85,Bollywood
+86,Pacific
+87,Celtic
+88,Be-Bop
+89,Big Band/Swing
+90,British Folk
+91,Techno
+92,House
+93,Glitch
+94,Minimal Electronic
+95,Breakcore - Hard
+96,Sound Poetry
+97,20th Century Classical
+98,Poetry
+99,Talk Radio
+100,North African
+101,Sound Collage
+102,Flamenco
+103,IDM
+104,Chiptune
+105,Musique Concrete
+106,Improv
+107,New Age
+108,Trip-Hop
+109,Dance
+110,Chip Music
+111,Lounge
+112,Goth
+113,Composed Music
+114,Drum & Bass
+115,Shoegaze
+116,Kid-Friendly
+117,Thrash
+118,Synth Pop
+119,Banter
+120,Deep Funk
+121,Spoken Word
+122,Chill-out
+123,Bigbeat
+124,Surf
+125,Radio Theater
+126,Grindcore
+127,Rock Opera
+128,Opera
+129,Chamber Music
+130,Choral Music
+131,Symphony
+132,Minimalism
+133,Musical Theater
+134,Dubstep
+135,Skweee
+136,Western Swing
+137,Downtempo
+138,Cumbia
+139,Latin
+140,Sound Art
+141,Romany (Gypsy)
+142,Compilation
+143,Rap
+144,Breakbeat
+145,Gospel
+146,Abstract Hip-Hop
+147,Reggae - Dancehall
+148,Spanish
+149,Country & Western
+150,Contemporary Classical
+151,Wonky
+152,Jungle
+153,Klezmer
+154,Holiday
+155,Salsa
+156,Nu-Jazz
+157,Hip-Hop Beats
+158,Modern Jazz
+159,Turkish
+160,Tango
+161,Fado
+162,Christmas
+163,Instrumental
