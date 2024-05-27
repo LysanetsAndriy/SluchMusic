@@ -6,6 +6,9 @@ from s3_upload import upload_file_to_s3
 from s3_download import download_file_from_s3
 from datetime import datetime as dt
 from mutagen.easyid3 import EasyID3
+import os
+import requests
+from flask_cors import CORS
 
 from extensions import api, db, migrate, jwt
 
@@ -129,12 +132,39 @@ def upload():
         # Upload file to S3
         s3_url = upload_file_to_s3(temp_file_path, file.filename, file.content_type, api.config["S3_BUCKET"])
 
+        try:
+            # Call the EC2 service to get lyrics
+            with open(temp_file_path, 'rb') as f:
+                response = requests.post("http://13.51.36.226/transcribe", files={'file': f})
+                response.raise_for_status()  # Check if the request was successful
+                lyrics = response.json().get("lyrics", "")
+        except requests.exceptions.RequestException as e:
+            return jsonify({"message": f"Error during transcription: {e}"}), 500
+
+        try:
+            # Call the EC2 service to get genre prediction
+            with open(temp_file_path, 'rb') as f:
+                response = requests.post("http://13.51.36.226/predict", files={'file': f})
+                response.raise_for_status()  # Check if the request was successful
+                predicted_genre = response.json().get("predicted_genre", "Unknown")
+
+                # Get genre ID from the database
+                genre = Genre.query.filter_by(name=predicted_genre).first()
+                genre_id = genre.id if genre else None
+        except requests.exceptions.RequestException as e:
+            return jsonify({"message": f"Error during genre prediction: {e}"}), 500
+        finally:
+            os.remove(temp_file_path)  # Clean up the temporary file
+
+        if not genre_id:
+            return jsonify({"message": "Genre not found"}), 500
+
         # Save song details to the database
         new_song = Song(
             name=file.filename,
             author=author,
-            genre_id=10,
-            text="",
+            genre_id=genre_id,
+            text=lyrics,
             uploader_id=user.id,
             upload_time=dt.utcnow(),
             s3_link=s3_url

@@ -4,13 +4,15 @@ from flask_migrate import Migrate
 from flask_jwt_extended import JWTManager
 import os
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 load_dotenv()  # Load environment variables from .env file
 
 api = Flask(__name__)
+CORS(api)
 
 # Database Configuration
-api.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/sluch_music'
+api.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/test_sluch_music'
 api.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # JWT Configuration
