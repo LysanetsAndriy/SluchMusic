@@ -20,9 +20,9 @@ from models import User, Song, Genre, FavouriteSongs, Playlist, PlaylistSongs
 def home():
     return jsonify(
         {
-            "message1": "Taranukha Pituh",
-            "message2": "Taranukha Chort",
-            "message3": "Taranukha Pidr"
+            "message1": "1",
+            "message2": "2",
+            "message3": "3"
         }
     )
 
